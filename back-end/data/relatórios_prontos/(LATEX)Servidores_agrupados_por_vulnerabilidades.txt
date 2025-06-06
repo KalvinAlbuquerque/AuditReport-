@@ -1,0 +1,168 @@
+%-------------- INÍCIO DA CATEGORIA Vulnerabilidades Relacionadas à Versões não suportadas --------------
+\subsection{Vulnerabilidades Relacionadas à Versões não suportadas}
+Riscos provenientes do uso de software ou sistemas operacionais desatualizados e fora de suporte, que não recebem mais atualizações de segurança e permanecem vulneráveis a ataques.
+
+%-------------- INÍCIO DA SUBCATEGORIA Protocolos e Cifras Depreciadas --------------
+\subsubsection{Protocolos e Cifras Depreciadas}
+Uso de protocolos e cifras antigas ou vulneráveis, como SSL 2/3 e RC4, que são suscetíveis a ataques e não oferecem proteção adequada.
+
+\begin{enumerate}
+%-------------- INÍCIO DA VULNERABILIDADE SSL Medium Strength Cipher Suites Supported (SWEET32) --------------
+\item \textbf{SSL Medium Strength Cipher Suites Supported (SWEET32)}\\
+\textbf{Descrição:} O host remoto suporta o uso de cifras SSL com força de criptografia média. Cifras de força média incluem aquelas que utilizam comprimentos de chave de pelo menos 64 bits e menos de 112 bits ou aquelas que utilizam o conjunto de cifras 3DES (Triple Data Encryption Standard). A vulnerabilidade conhecida como SWEET32 explora fraquezas em cifras baseadas em 3DES devido ao seu tamanho de bloco reduzido (64 bits). Essa característica facilita ataques que dependem da repetição de blocos de criptografia (birthday attacks), especialmente em ambientes onde um grande volume de dados é transmitido pela mesma sessão criptografada. A criptografia de força média é significativamente mais fácil de ser comprometida, especialmente quando o atacante está na mesma rede física do alvo. O suporte a cifras de força média pode resultar em ataques de descriptografia, comprometimento da privacidade e não conformidade regulatória.
+
+\textbf{Solução:} A solução recomendada é reconfigurar a aplicação afetada para evitar o uso de cifras de força média. Isso inclui desativar o suporte ao 3DES e garantir que apenas cifras fortes, que utilizem comprimentos de chave modernos e modos de criptografia robustos, sejam habilitadas. A substituição de cifras de força média por alternativas mais seguras melhora a resistência contra ataques criptográficos e garante a conformidade com os padrões de segurança cibernética mais recentes.
+
+\textbf{Total de URIs Afetadas:} 5
+
+\textbf{Instâncias Afetadas:}
+\begin{itemize}
+    \item \url{semgefilesrv01}
+    \item \url{siga}
+    \item \url{semge-dc01}
+    \item \url{trellixepo}
+    \item \url{semge-dc02}
+\end{itemize}
+
+%-------------- FIM DA VULNERABILIDADE SSL Medium Strength Cipher Suites Supported (SWEET32) --------------
+%-------------- INÍCIO DA VULNERABILIDADE TLS Version 1.0 Protocol Detection --------------
+\item \textbf{TLS Version 1.0 Protocol Detection}\\
+\textbf{Descrição:} O serviço remoto está aceitando conexões criptografadas usando TLS 1.0. Embora o TLS 1.0 tenha sido uma melhoria significativa em relação ao SSL, ele ainda possui várias falhas de design criptográfico. Versões mais recentes do TLS, como 1.2 e 1.3, foram projetadas para resolver essas falhas de maneira mais robusta e devem ser utilizadas sempre que possível. A utilização do TLS 1.0 pode expor a comunicação a falhas de design criptográfico, incompatibilidade com navegadores modernos e não conformidade com regulamentos de segurança como o PCI DSS.
+
+\textbf{Solução:} A solução para mitigar essa vulnerabilidade é habilitar o suporte para TLS 1.2 e 1.3 e desabilitar completamente o TLS 1.0.
+
+\textbf{Total de URIs Afetadas:} 5
+
+\textbf{Instâncias Afetadas:}
+\begin{itemize}
+    \item \url{semgefilesrv01}
+    \item \url{siga}
+    \item \url{semge-dc01}
+    \item \url{trellixepo}
+    \item \url{semge-dc02}
+\end{itemize}
+
+%-------------- FIM DA VULNERABILIDADE TLS Version 1.0 Protocol Detection --------------
+\end{enumerate}
+%-------------- FIM DA SUBCATEGORIA Protocolos e Cifras Depreciadas --------------
+%-------------- FIM DA CATEGORIA Vulnerabilidades Relacionadas à Versões não suportadas --------------
+%-------------- INÍCIO DA CATEGORIA Vulnerabilidades associadas a versões obsoletas --------------
+\subsection{Vulnerabilidades associadas a versões obsoletas}
+Falhas de segurança decorrentes do uso de versões antigas e não mantidas de aplicativos e serviços populares, que possuem vulnerabilidades conhecidas e não corrigidas.
+
+%-------------- INÍCIO DA SUBCATEGORIA Softwares Desatualizados --------------
+\subsubsection{Softwares Desatualizados}
+Adoção de versões desatualizadas de software, como Apache, Tomcat ou navegadores, que são susceptíveis a falhas de segurança que já foram corrigidas em versões mais recentes.
+
+\begin{enumerate}
+%-------------- INÍCIO DA VULNERABILIDADE KB4025339: Windows 10 Version 1607 and Windows Server 2016 July 2017 Cumulative Update --------------
+\item \textbf{KB4025339: Windows 10 Version 1607 and Windows Server 2016 July 2017 Cumulative Update}\\
+\textbf{Descrição:} O host Windows remoto está sem a atualização de segurança KB4025339 e, portanto, é afetado por múltiplas vulnerabilidades. Uma vulnerabilidade de divulgação de informações (CVE-2017-0170) existe no Windows Performance Monitor Console devido ao parsing inadequado de entrada XML. Um atacante remoto e não autenticado pode explorar isso para divulgar arquivos arbitrários. Uma vulnerabilidade de execução remota de código (CVE-2017-8463) existe no Windows Explorer devido ao manuseio inadequado de arquivos executáveis e compartilhamentos durante operações de renomeação. Um atacante remoto e não autenticado pode explorar isso para executar código arbitrário no contexto do usuário atual.
+
+\textbf{Solução:} Aplicar a atualização de segurança KB4025339 e consultar o artigo da KB para informações adicionais.
+
+\textbf{Total de URIs Afetadas:} 2
+
+\textbf{Instâncias Afetadas:}
+\begin{itemize}
+    \item \url{semge-dc02}
+    \item \url{semge-dc01}
+\end{itemize}
+
+%-------------- FIM DA VULNERABILIDADE KB4025339: Windows 10 Version 1607 and Windows Server 2016 July 2017 Cumulative Update --------------
+\end{enumerate}
+%-------------- FIM DA SUBCATEGORIA Softwares Desatualizados --------------
+%-------------- FIM DA CATEGORIA Vulnerabilidades associadas a versões obsoletas --------------
+%-------------- INÍCIO DA CATEGORIA Vulnerabilidades relacionadas à Cifras Não suportadas --------------
+\subsection{Vulnerabilidades relacionadas à Cifras Não suportadas}
+Falhas associadas ao uso de algoritmos de criptografia fracos ou desatualizados, que podem ser facilmente quebrados por atacantes, comprometendo a confidencialidade dos dados.
+
+%-------------- INÍCIO DA SUBCATEGORIA Protocolos e Cifras Depreciadas --------------
+\subsubsection{Protocolos e Cifras Depreciadas}
+Uso de protocolos e cifras antigas ou vulneráveis, como SSL 2/3 e RC4, que são suscetíveis a ataques e não oferecem proteção adequada.
+
+\begin{enumerate}
+%-------------- INÍCIO DA VULNERABILIDADE TLS Version 1.1 Deprecated Protocol --------------
+\item \textbf{TLS Version 1.1 Deprecated Protocol}\\
+\textbf{Descrição:} O serviço remoto analisado aceita conexões criptografadas utilizando o protocolo TLS 1.1. Este protocolo está obsoleto e não oferece suporte para conjuntos de cifras atuais e recomendados. Cifras que utilizam encriptação antes da computação MAC, bem como modos de autenticação como GCM (Galois/Counter Mode), não podem ser utilizados com o TLS 1.1. Desde 31 de março de 2020, endpoints que não oferecem suporte ao TLS 1.2 ou superior não funcionam adequadamente com os principais navegadores da web e fornecedores de tecnologia. O uso contínuo do TLS 1.1 representa um risco à segurança e à compatibilidade. O suporte ao TLS 1.1 pode levar a comprometimento da segurança, incompatibilidade com navegadores modernos e não conformidade regulatória, como PCI DSS.
+
+\textbf{Solução:} A solução recomendada é habilitar o suporte para TLS 1.2 e/ou TLS 1.3 e desativar o suporte para o TLS 1.1. Isso garante o uso de protocolos modernos que oferecem maior segurança, compatibilidade e conformidade com os padrões do setor. Recomendamos que todas as configurações e sistemas sejam revisados para implementar essas alterações o mais breve possível. A atualização para protocolos mais modernos não apenas mitiga vulnerabilidades associadas ao TLS 1.1, mas também melhora o desempenho das conexões e a experiência geral do usuário.
+
+\textbf{Total de URIs Afetadas:} 5
+
+\textbf{Instâncias Afetadas:}
+\begin{itemize}
+    \item \url{semgefilesrv01}
+    \item \url{siga}
+    \item \url{semge-dc01}
+    \item \url{trellixepo}
+    \item \url{semge-dc02}
+\end{itemize}
+
+%-------------- FIM DA VULNERABILIDADE TLS Version 1.1 Deprecated Protocol --------------
+%-------------- INÍCIO DA VULNERABILIDADE SSL RC4 Cipher Suites Supported (Bar Mitzvah) --------------
+\item \textbf{SSL RC4 Cipher Suites Supported (Bar Mitzvah)}\\
+\textbf{Descrição:} O host remoto suporta o uso do algoritmo de cifra RC4 em uma ou mais suítes criptográficas. O RC4 possui falhas conhecidas na geração de seu fluxo de bytes pseudoaleatório, introduzindo diversos vieses que reduzem sua aleatoriedade. Se um mesmo texto em claro for criptografado repetidamente (por exemplo, cookies HTTP) e um atacante conseguir capturar um grande número de textos cifrados (dezenas de milhões), há a possibilidade de inferir o conteúdo original da comunicação. Isso compromete a confidencialidade dos dados transmitidos.
+
+\textbf{Solução:} Recomenda-se reconfigurar a aplicação afetada para evitar o uso de cifras RC4. Sempre que possível, utilize TLS 1.2 com suítes criptográficas baseadas em AES-GCM, garantindo compatibilidade com navegadores e servidores web suportados. Essa atualização melhora a segurança das comunicações e mitiga os riscos associados ao uso de cifras obsoletas.
+
+\textbf{Total de URIs Afetadas:} 2
+
+\textbf{Instâncias Afetadas:}
+\begin{itemize}
+    \item \url{semge-dc02}
+    \item \url{semge-dc01}
+\end{itemize}
+
+%-------------- FIM DA VULNERABILIDADE SSL RC4 Cipher Suites Supported (Bar Mitzvah) --------------
+\end{enumerate}
+%-------------- FIM DA SUBCATEGORIA Protocolos e Cifras Depreciadas --------------
+%-------------- FIM DA CATEGORIA Vulnerabilidades relacionadas à Cifras Não suportadas --------------
+%-------------- INÍCIO DAS VULNERABILIDADES SEM CATEGORIA --------------
+\section{Vulnerabilidades sem Categoria}
+\begin{itemize}
+    \item ICMP Timestamp Request Remote Date Disclosure
+    \item SSL Certificate Cannot Be Trusted
+    \item SSL Self-Signed Certificate
+    \item Windows Speculative Execution Configuration Check
+    \item WinVerifyTrust Signature Validation CVE-2013-3900 Mitigation (EnableCertPaddingCheck)
+    \item VMware Tools 10.3.x / 11.x / 12.x < 12.3.0 Authentication Bypass (VMSA-2023-0019)
+    \item VMware Tools 10.3.x / 11.x / 12.x < 12.3.5 Token Bypass (VMSA-2023-0024)
+    \item VMware Tools 11.x / 12.x < 12.5.1 Authentication Bypass (VMSA-2025-0005)
+    \item SMB Signing not required
+    \item Microsoft Windows Unquoted Service Path Enumeration
+    \item Fortinet FortiClient Named Pipes Improper Access Control (FG-IR-24-199)
+    \item Fortinet FortiClient 7.0.x < 7.0.14 / 7.2.x < 7.2.7 / 7.4.x < 7.4.2 Information Disclosure (FG-IR-23-278)
+    \item Fortinet FortiClient Hardcoded Encryption Key Used for Named Pipe Communication (FG-IR-24-216)
+    \item Fortinet FortiClient  (FG-IR-23-279)
+    \item Security Updates for Windows 10 / Windows Server 2016 (August 2018) (Spectre) (Meltdown) (Foreshadow)
+    \item Security Updates for Windows 10 / Windows Server 2016 (September 2018) (Spectre)
+    \item Security Updates for Windows 10 / Windows Server 2016 (January 2019) (Spectre)
+    \item Windows 10 / Windows Server 2016 September 2017 Information Disclosure Vulnerability (CVE-2017-8529)
+    \item KB5044293: Windows 10 Version 1607 / Windows Server 2016 Security Update (October 2024)
+    \item KB5046612: Windows 10 Version 1607 / Windows Server 2016 Security Update (November 2024)
+    \item KB5048671: Windows 10 Version 1607 / Windows Server 2016 Security Update (December 2024)
+    \item KB5049993: Windows 10 Version 1607 / Windows Server 2016 Security Update (January 2025)
+    \item KB5052006: Windows 10 Version 1607 / Windows Server 2016 Security Update (February 2025)
+    \item KB5053594: Windows 10 Version 1607 / Windows Server 2016 Security Update (March 2025)
+    \item KB5055521: Windows 10 Version 1607 / Windows Server 2016 Security Update (April 2025)
+    \item SSL Certificate with Wrong Hostname
+    \item Security Updates for Microsoft SQL Server (January 2021)
+    \item Apache Log4j 1.2 JMSAppender Remote Code Execution (CVE-2021-4104)
+    \item Apache Log4j 1.x Multiple Vulnerabilities
+    \item Security Updates for Microsoft SQL Server (June 2022)
+    \item Security Updates for Microsoft SQL Server (February 2023)
+    \item Security Updates for Microsoft SQL Server (April 2023)
+    \item Apache Log4j SEoL (<= 1.x)
+    \item Security Updates for Microsoft SQL Server (October 2023)
+    \item Microsoft Azure Data Studio < 1.48.0 Elevation of Privilege Vulnerability (CVE-2024-26203)
+    \item Security Updates for Microsoft SQL Server ODBC Driver (April 2024)
+    \item Security Updates for Microsoft SQL Server OLE DB Driver (April 2024)
+    \item Security Updates for Microsoft SQL Server OLE DB Driver (July 2024)
+    \item Security Updates for Microsoft SQL Server Elevation of Privilege (September 2024)
+    \item Security Updates for Microsoft SQL Server (September 2024)
+    \item Security Updates for Microsoft SQL Server (CVE-2024-43474) (September 2024)
+    \item Security Updates for Microsoft SQL Server (November 2024)
+    \item Security Updates for Microsoft SQL Server (July 2024)
+\end{itemize}
+%-------------- FIM DAS VULNERABILIDADES SEM CATEGORIA --------------

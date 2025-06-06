@@ -1,0 +1,5 @@
+{
+    "caminho_shared_relatorios" : "../shared/relatorios",
+    "caminho_shared_relatorios_exemplo": "../shared/relatorios/Exemplo",
+    "caminho_shared_jsons" : "../shared/json_exports"
+}

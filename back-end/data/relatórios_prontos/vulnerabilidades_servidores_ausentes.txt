@@ -1,0 +1,43 @@
+ICMP Timestamp Request Remote Date Disclosure
+SSL Certificate Cannot Be Trusted
+SSL Self-Signed Certificate
+Security Updates for Windows 10 / Windows Server 2016 (August 2018) (Spectre) (Meltdown) (Foreshadow)
+Security Updates for Windows 10 / Windows Server 2016 (September 2018) (Spectre)
+Security Updates for Windows 10 / Windows Server 2016 (January 2019) (Spectre)
+Windows Speculative Execution Configuration Check
+Windows 10 / Windows Server 2016 September 2017 Information Disclosure Vulnerability (CVE-2017-8529)
+WinVerifyTrust Signature Validation CVE-2013-3900 Mitigation (EnableCertPaddingCheck)
+VMware Tools 10.3.x / 11.x / 12.x < 12.3.0 Authentication Bypass (VMSA-2023-0019)
+VMware Tools 10.3.x / 11.x / 12.x < 12.3.5 Token Bypass (VMSA-2023-0024)
+VMware Tools 11.x / 12.x < 12.5.1 Authentication Bypass (VMSA-2025-0005)
+KB5044293: Windows 10 Version 1607 / Windows Server 2016 Security Update (October 2024)
+KB5046612: Windows 10 Version 1607 / Windows Server 2016 Security Update (November 2024)
+KB5048671: Windows 10 Version 1607 / Windows Server 2016 Security Update (December 2024)
+KB5049993: Windows 10 Version 1607 / Windows Server 2016 Security Update (January 2025)
+KB5052006: Windows 10 Version 1607 / Windows Server 2016 Security Update (February 2025)
+KB5053594: Windows 10 Version 1607 / Windows Server 2016 Security Update (March 2025)
+KB5055521: Windows 10 Version 1607 / Windows Server 2016 Security Update (April 2025)
+SMB Signing not required
+Microsoft Windows Unquoted Service Path Enumeration
+Fortinet FortiClient Named Pipes Improper Access Control (FG-IR-24-199)
+Fortinet FortiClient 7.0.x < 7.0.14 / 7.2.x < 7.2.7 / 7.4.x < 7.4.2 Information Disclosure (FG-IR-23-278)
+Fortinet FortiClient Hardcoded Encryption Key Used for Named Pipe Communication (FG-IR-24-216)
+Fortinet FortiClient  (FG-IR-23-279)
+SSL Certificate with Wrong Hostname
+Security Updates for Microsoft SQL Server (January 2021)
+Apache Log4j 1.2 JMSAppender Remote Code Execution (CVE-2021-4104)
+Apache Log4j 1.x Multiple Vulnerabilities
+Security Updates for Microsoft SQL Server (June 2022)
+Security Updates for Microsoft SQL Server (February 2023)
+Security Updates for Microsoft SQL Server (April 2023)
+Apache Log4j SEoL (<= 1.x)
+Security Updates for Microsoft SQL Server (October 2023)
+Microsoft Azure Data Studio < 1.48.0 Elevation of Privilege Vulnerability (CVE-2024-26203)
+Security Updates for Microsoft SQL Server ODBC Driver (April 2024)
+Security Updates for Microsoft SQL Server OLE DB Driver (April 2024)
+Security Updates for Microsoft SQL Server OLE DB Driver (July 2024)
+Security Updates for Microsoft SQL Server Elevation of Privilege (September 2024)
+Security Updates for Microsoft SQL Server (September 2024)
+Security Updates for Microsoft SQL Server (CVE-2024-43474) (September 2024)
+Security Updates for Microsoft SQL Server (November 2024)
+Security Updates for Microsoft SQL Server (July 2024)

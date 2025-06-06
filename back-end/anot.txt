@@ -1,0 +1,25 @@
+api tenable -> 
+
+was:
+-> listar scans por pastas (de usuario especifico) :::::::: ok
+-> listar todos os scans :::::::: ok ??
+-> listar scans por endereço de target (de usuario especifico) :::::::: ok
+-> fazer download json de scans :::::::: ok
+
+relatorio -> 
+
+-> gerar relatorio 100% automatizado
+    -> mandar arquivos do data para a pasta shared :::::::: ok
+    -> copiar relatorio exemplo e alterar tudo para montar o relatorio apos preprocessamento
+    -> adicionar ip servidores afetados
+    -> lib para gerar graficos
+    -> adicionar hosts afetados
+
+    -> ter como listar as vulnerabilidades que não foram categorizadas e ter como adiciona-las (frontend + backend)
+
+
+email ->
+
+-> 
+
+api google drive ->

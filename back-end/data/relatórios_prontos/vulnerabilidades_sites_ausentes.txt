@@ -1,0 +1,15 @@
+Cross-Site Scripting (XSS)
+WordPress 5.9.x < 5.9.7 Shortcode Execution
+Bootstrap 4.0.0 < 4.1.2 Cross-Site Scripting
+WordPress 5.9.x < 5.9.10 Multiple Vulnerabilities
+WordPress 5.9.x < 5.9.2 Multiple Vulnerabilities
+HTTP Parameter Pollution
+WordPress 5.9.x < 5.9.9 Multiple Vulnerabilities
+WordPress 5.9.x < 5.9.8 Multiple Vulnerabilities
+WordPress XML-RPC Interface Detected
+WordPress Cron Enabled
+WordPress Administration Panel Login Form Detected
+WordPress 5.9.x < 5.9.4 Multiple Vulnerabilities
+WordPress 5.9.x < 5.9.5 Multiple Vulnerabilities
+WordPress 5.9.x < 5.9.6 Multiple Vulnerabilities
+Host Header Injection

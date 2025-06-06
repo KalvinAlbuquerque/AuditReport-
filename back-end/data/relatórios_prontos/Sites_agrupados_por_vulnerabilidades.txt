@@ -1,0 +1,123 @@
+Resumo das Vulnerabilidades por Risk Factor:
+
+Critical: 1
+High: 4
+Medium: 70
+Low: 123
+Total de Vulnerabilidades:198
+
+
+Domínios analisados:
+
+Total de sites:3
+https://cgm.salvador.ba.gov.br/
+http://trilhas.homologa.salvador.ba.gov.br/
+https://concursotransparencia.salvador.ba.gov.br/
+
+Vulnerabilidades em comum, entre os sites/URI:
+
+
+Vulnerabilidade:HTTP Header Information Disclosure
+Plugin ID:98618
+Total de URI Afetadas:3
+URI Afetadas:
+http://trilhas.homologa.salvador.ba.gov.br
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Missing 'X-Frame-Options' Header
+Plugin ID:98060
+Total de URI Afetadas:3
+URI Afetadas:
+http://trilhas.homologa.salvador.ba.gov.br
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Password Field With Auto-Complete
+Plugin ID:98081
+Total de URI Afetadas:3
+URI Afetadas:
+http://trilhas.homologa.salvador.ba.gov.br
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Cookie Without SameSite Flag Detected
+Plugin ID:115540
+Total de URI Afetadas:2
+URI Afetadas:
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Permissive HTTP Strict Transport Security Policy Detected
+Plugin ID:98715
+Total de URI Afetadas:2
+URI Afetadas:
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Cookie Without Secure Flag Detected
+Plugin ID:98064
+Total de URI Afetadas:2
+URI Afetadas:
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Permissive Content Security Policy Detected
+Plugin ID:112554
+Total de URI Afetadas:2
+URI Afetadas:
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:SSL/TLS Weak Cipher Suites Supported
+Plugin ID:112539
+Total de URI Afetadas:2
+URI Afetadas:
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Cookie Without HttpOnly Flag Detected
+Plugin ID:98063
+Total de URI Afetadas:2
+URI Afetadas:
+http://trilhas.homologa.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Login Form Cross-Site Request Forgery
+Plugin ID:113332
+Total de URI Afetadas:2
+URI Afetadas:
+http://trilhas.homologa.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:SSL/TLS Forward Secrecy Cipher Suites Not Supported
+Plugin ID:98617
+Total de URI Afetadas:2
+URI Afetadas:
+https://concursotransparencia.salvador.ba.gov.br
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Secret Data Disclosure
+Plugin ID:114129
+Total de URI Afetadas:2
+URI Afetadas:
+http://trilhas.homologa.salvador.ba.gov.br
+https://concursotransparencia.salvador.ba.gov.br
+
+Vulnerabilidade:Source Code Passive Disclosure
+Plugin ID:98779
+Total de URI Afetadas:1
+URI Afetadas:
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:Cross-Site Scripting (XSS)
+Plugin ID:98104
+Total de URI Afetadas:1
+URI Afetadas:
+https://cgm.salvador.ba.gov.br
+
+Vulnerabilidade:HTML/CSS Injection
+Plugin ID:114134
+Total de URI Afetadas:1
+URI Afetadas:
+https://cgm.salvador.ba.gov.br
