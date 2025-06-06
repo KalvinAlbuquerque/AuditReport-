@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 from flask_cors import cross_origin
-from utils.config import Config
-from api.tenable_api import TenableApi # Se não for usado, pode remover
-from database.database import Database
+from ...utils.config import Config
+from ...api.tenable_api import TenableApi # Se não for usado, pode remover
+from ...database.database import Database
 import os
 from pathlib import Path
 import shutil

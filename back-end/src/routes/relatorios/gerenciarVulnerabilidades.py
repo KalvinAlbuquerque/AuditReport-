@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename # Importar secure_filename para segur
 
 # Importe suas funções auxiliares
 # Certifique-se de que 'utils/json_utils.py' existe e está acessível
-from utils.json_utils import _load_data, _save_data, add_vulnerability, \
+from ...utils.json_utils import _load_data, _save_data, add_vulnerability, \
                              get_all_vulnerabilities, update_vulnerability, delete_vulnerability, _load_data_
 
 # Obtenha o diretório base do script atual

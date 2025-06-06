@@ -1,8 +1,15 @@
+// frontend/vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss(),],
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0', // Garante que o Vite ouça em todos os IPs disponíveis no container
+    port: 3000,      // <--- ADICIONE ESTA LINHA para forçar a porta 3000
+    watch: {
+      usePolling: true, // Pode ser útil em ambientes Linux/WSL para hot-reloading
+    }
+  }
 })

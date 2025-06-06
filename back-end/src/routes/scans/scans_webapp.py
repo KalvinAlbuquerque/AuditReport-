@@ -1,8 +1,8 @@
 from flask import Blueprint, request
 from flask_cors import cross_origin
 
-from utils.config import Config
-from api.tenable_api import TenableApi
+from ...utils.config import Config
+from ...api.tenable_api import TenableApi
 import os
 
 tenable_api = TenableApi()

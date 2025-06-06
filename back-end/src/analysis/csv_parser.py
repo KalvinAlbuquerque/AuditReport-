@@ -4,8 +4,7 @@ import os
 import re
 from typing import List
 import pandas as pd
-from json_parser import carregar_descritivo_vulnerabilidades
-from utils.json_utils import carregar_json_utf
+from ..utils.json_utils import carregar_json_utf
 
 
 def obter_vulnerabilidades_comum_csv(csv_files: List[str]) -> dict:

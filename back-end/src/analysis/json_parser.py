@@ -23,8 +23,8 @@ from typing import List
 import json
 from pathlib import Path
 
-from utils.utils import contar_riscos, limpar_protocolos_url
-from utils.json_utils import carregar_json, carregar_json_utf
+from ..utils.utils import contar_riscos, limpar_protocolos_url
+from ..utils.json_utils import carregar_json, carregar_json_utf
 
 
 CAMINHO_RELATORIOS_JSON = "data/arquivos_json"

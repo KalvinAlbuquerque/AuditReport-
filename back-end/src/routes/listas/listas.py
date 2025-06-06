@@ -3,14 +3,14 @@ from flask_cors import cross_origin
 
 import time
 
-from utils.config import Config
-from api.tenable_api import TenableApi
-from database.database import Database
+from ...utils.config import Config
+from ...api.tenable_api import TenableApi
+from ...database.database import Database
 import os
 
-from analysis.vulnerability_handler import *
-from report.report_generator import terminar_relatorio_preprocessado, compilar_latex
-from plot.plot import gerar_Grafico_Quantitativo_Vulnerabilidades_Por_Site
+from ...analysis.vulnerability_handler import *
+from ...report.report_generator import terminar_relatorio_preprocessado, compilar_latex
+from ...plot.plot import gerar_Grafico_Quantitativo_Vulnerabilidades_Por_Site
 from bson import ObjectId
 import shutil
 
@@ -601,8 +601,7 @@ def baixar_relatorio_pdf():
 
         # Usando pathlib para garantir que o caminho esteja correto
         
-        caminho_pdf = "C:/Users/glenda/Desktop/cogel/relatorio-vulnerabilidades/" + f"{config.caminho_shared_relatorios.replace("..", "")}/{id_relatorio}/relatorio_preprocessado/RelatorioPronto/main.pdf"
-
+        caminho_pdf = f"/app/shared/relatorios/{id_relatorio}/relatorio_preprocessado/RelatorioPronto/main.pdf"
         print(caminho_pdf)
 
         # Tentar enviar o arquivo

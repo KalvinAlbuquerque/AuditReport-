@@ -1,0 +1,47 @@
+# docker-compose.yml - Configuração para ambiente local sem credenciais no MongoDB e caminhos corrigidos
+
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: meu_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db # Persistência de dados para o MongoDB
+    restart: always
+
+  backend:
+    build: ./back-end # Corrigido: 'backend' para 'back-end'
+    container_name: meu_backend
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_URI: mongodb://mongodb:27017/mydatabase
+    depends_on:
+      - mongodb # Garante que o MongoDB inicie antes do backend
+    volumes:
+      - ./shared:/app/shared # Mapeia a pasta 'shared' do host para '/app/shared' no contêiner
+    restart: always
+
+  frontend:
+    build: ./front-end # Corrigido: 'frontend' para 'front-end'
+    container_name: meu_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      # Corrigido: Use o nome do serviço 'backend' para comunicação interna entre containers
+      REACT_APP_API_URL: http://backend:5000
+    depends_on:
+      - backend # Garante que o backend inicie antes do frontend
+    volumes:
+      # Mapeia o código-fonte do frontend para hot-reloading em desenvolvimento
+      - ./front-end:/app
+      # Volume anônimo para node_modules para evitar problemas de compatibilidade entre host/container
+      - /app/node_modules
+    restart: always
+
+volumes:
+  mongodb_data:
+    driver: local
